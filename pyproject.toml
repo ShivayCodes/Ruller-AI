@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ruller-ai"
+version = "0.1.0"
+description = "Offline-first, modular Python assistant prototype with local memory and retrieval"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ShivayCodes" }]
+dependencies = []
+
+[project.scripts]
+ruller-ai = "ruller_ai.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ruller_ai*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
