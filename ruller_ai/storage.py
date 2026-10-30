@@ -15,7 +15,7 @@ def read_json(path: Path, default: Any) -> Any:
         raise RuntimeError(f"Could not read data file {path}: {exc}") from exc
 
 
-def write_json(path: Path, value: Any) -> None:
+def write_json(path: Path, value: Any, *, sync: bool = False) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".tmp")
     try:
@@ -23,7 +23,8 @@ def write_json(path: Path, value: Any) -> None:
             json.dump(value, handle, ensure_ascii=False, indent=2)
             handle.write("\n")
             handle.flush()
-            os.fsync(handle.fileno())
+            if sync:
+                os.fsync(handle.fileno())
         temporary.replace(path)
     except OSError as exc:
         try:
