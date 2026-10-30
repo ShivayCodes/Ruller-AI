@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ruller-ai"
-version = "0.1.0"
-description = "Offline-first, modular Python assistant prototype with local memory and retrieval"
+name = "ultron-1-0"
+version = "1.0.0"
+description = "U.L.T.R.O.N 1.0 — offline-first, modular Python assistant prototype with local memory and retrieval"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }

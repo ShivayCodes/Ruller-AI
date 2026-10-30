@@ -1,8 +1,8 @@
-# Ruller AI
+# U.L.T.R.O.N 1.0
 
 **Beyond Conventional AI. Toward Adaptive Intelligence.**
 
-Ruller AI is an **offline-first Python assistant prototype** with local conversation memory, a small knowledge base, explainable text retrieval, and a constrained arithmetic tool. It is designed as a clean foundation that can later be extended with a real local language model.
+U.L.T.R.O.N 1.0 is an **offline-first Python assistant prototype** with local conversation memory, a small knowledge base, explainable text retrieval, and a constrained arithmetic tool. It is designed as a transparent, testable foundation for adaptive intelligence research.
 
 > **Important:** The current version is not a trained language model. It uses explicit commands, lexical retrieval, and deterministic rules. It does not claim AGI, consciousness, or unlimited reasoning.
 
@@ -62,7 +62,7 @@ Supported commands:
 
 ## Choose where data is stored
 
-By default, Ruller AI stores files under `~/.ruller_ai/`. To use a custom location:
+By default, U.L.T.R.O.N 1.0 stores files under `~/.ruller_ai/`. To use a custom location:
 
 ```powershell
 python -m ruller_ai --data-dir .\ruller-data
@@ -94,6 +94,8 @@ ruller_ai/
   memory.py
   reasoning.py
   storage.py
+  vision.py
+  providers.py
 tests/
   test_core.py
 docs/
