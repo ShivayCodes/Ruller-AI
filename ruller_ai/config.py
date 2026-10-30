@@ -11,6 +11,10 @@ class Settings:
     max_input_chars: int = 8_000
     max_memory_items: int = 2_000
     max_knowledge_items: int = 5_000
+    provider: str | None = None
+    model: str | None = None
+    api_base: str | None = None
+    api_key: str | None = None
 
     @property
     def memory_file(self) -> Path:
